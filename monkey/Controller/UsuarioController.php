@@ -19,7 +19,7 @@ class UsuarioController
 
     public function autenticar(){
         $usuario = $_POST['usuario'];
-        $senha = md5($_POST['senha']);
+        $senha = $_POST['senha'];
         if(Model\Usuario::autenticar($usuario, $senha)){
             $_SESSION['usuario'] = $usuario;
             $_SESSION['senha'] = $senha;
